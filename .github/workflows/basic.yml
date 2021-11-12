@@ -40,15 +40,15 @@ jobs:
     name: Greet Alice
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: $GITHUB_JOB
+      greet-name: ${{ GITHUB_JOB }}
   bob:
     name: Greet Bob
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: $GITHUB_JOB
+      greet-name: ${{ GITHUB_JOB }}
   charlie:
     name: Greet Charlie
     needs: [alice]
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: $GITHUB_JOB
+      greet-name: ${{ GITHUB_JOB }}
