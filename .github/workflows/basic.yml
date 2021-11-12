@@ -34,21 +34,20 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - run: env | grep -i build || true
 
-  alice:    
+  greet-alice:
     name: Greet Alice
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: ${{ env.GITHUB_JOB }}
-  bob:
+      greet-name: alice
+  greet-bob:
     name: Greet Bob
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: ${{ env.GITHUB_JOB }}
-  charlie:
+      greet-name: bob
+  greet-charlie:
     name: Greet Charlie
-    needs: [alice]
+    needs: [greet-alice]
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: ${{ env.GITHUB_JOB }}
+      greet-name: charlie
