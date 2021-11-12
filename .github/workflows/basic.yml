@@ -34,6 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      - run: env | grep -i build || true
 
   greet-alice:    
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
