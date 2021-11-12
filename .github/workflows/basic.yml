@@ -36,4 +36,11 @@ jobs:
           echo test, and deploy your project.
           
   reuse-other-workflow:
-    uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
+    strategy:
+      matrix:
+        name: [ "alice", "bob", "charlie", "dan", "erin" ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
+        with:
+          greet-name: ${{ matrix.name }}
