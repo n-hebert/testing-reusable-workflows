@@ -35,19 +35,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-  greet-alice:
-    name: Greet Alice
+  greet-all:
+    name: Greet All
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: alice
-  greet-bob:
-    name: Greet Bob
-    uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
-    with:
-      greet-name: bob
-  greet-charlie:
-    name: Greet Charlie
-    needs: [greet-alice]
-    uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
-    with:
-      greet-name: charlie
+      greet-name-matrix: "[ alice, bob, charlie ]"
