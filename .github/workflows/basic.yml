@@ -42,9 +42,9 @@ jobs:
   greet-bob:
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: alice
+      greet-name: bob
   greet-charlie:
     needs: [greet-alice]
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: alice
+      greet-name: charlie
