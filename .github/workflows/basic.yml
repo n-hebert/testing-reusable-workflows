@@ -36,16 +36,19 @@ jobs:
           echo test, and deploy your project.
       - run: env | grep -i build || true
 
-  greet-alice:    
+  alice:    
+    name: Greet Alice
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: alice
-  greet-bob:
+      greet-name: $GITHUB_JOB
+  bob:
+    name: Greet Bob
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: bob
-  greet-charlie:
-    needs: [greet-alice]
+      greet-name: $GITHUB_JOB
+  charlie:
+    name: Greet Charlie
+    needs: [alice]
     uses: n-hebert/learning-github-actions/.github/workflows/learn-github-actions.yml@main
     with:
-      greet-name: charlie
+      greet-name: $GITHUB_JOB
