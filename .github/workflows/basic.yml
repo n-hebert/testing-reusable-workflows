@@ -15,5 +15,5 @@ jobs:
     with:
       greet-name-matrix: "[ \"alice\", \"bob\", \"charlie\" ]"
     secrets:
-      ALICE: "this probably works"
-      BOB: "but the security is garbage"
+      ALICE: ${{ secrets.ALICE }}
+      BOB: ${{ secrets.BOB }}
