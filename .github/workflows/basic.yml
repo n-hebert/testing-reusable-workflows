@@ -13,4 +13,4 @@ jobs:
     name: Greet All
     uses: n-hebert/learning-github-actions/.github/workflows/reusable.yml@main
     with:
-      greet-name-matrix: '[ \"alice\", \"bob\", \"charlie\" ]'
+      greet-name-matrix: "[ \"alice\", \"bob\", \"charlie\" ]"
