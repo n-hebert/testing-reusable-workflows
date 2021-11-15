@@ -14,5 +14,6 @@ jobs:
     uses: n-hebert/learning-github-actions/.github/workflows/reusable.yml@main
     with:
       greet-name-matrix: "[ \"alice\", \"bob\", \"charlie\" ]"
+    secrets:
       ALICE: "this probably works"
       BOB: "but the security is garbage"
