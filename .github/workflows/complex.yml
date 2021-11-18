@@ -13,4 +13,4 @@ jobs:
     name: Greet All
     uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
     with:
-      greeting_matrix: '{"include":[{"greeting":"hello","greet_name":"alice"},{"greeting":"bonjour","greet_name":"bob"},{"greeting":"hola","greet_name":"charlie"}]}'
+      greeting_matrix: '[{"greeting":"hello","greet_name":"alice"},{"greeting":"bonjour","greet_name":"bob"},{"greeting":"hola","greet_name":"charlie"}]'
