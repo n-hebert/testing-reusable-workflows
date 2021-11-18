@@ -11,7 +11,7 @@ on:
 jobs:
   greet-all:
     name: Greet All
-    uses: n-hebert//testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
+    uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
     with:
       greet-name-matrix: |
         '{
