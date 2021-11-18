@@ -13,7 +13,7 @@ jobs:
     name: Greet All
     uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
     with:
-      greet-name-matrix: |
+      greeting-matrix: |
         '{
           [
             { greeting: "hello", greet-name: "alice" },
