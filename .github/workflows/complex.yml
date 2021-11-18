@@ -1,0 +1,23 @@
+name: Complex CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  greet-all:
+    name: Greet All
+    uses: n-hebert//testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
+    with:
+      greet-name-matrix: |
+        '{
+          [
+            { greeting: "hello", greet-name: "alice" },
+            { greeting: "bonjour", greet-name: "bob" },
+            { greeting: "hola", greet-name: "charlie" }
+          ]
+        }'
