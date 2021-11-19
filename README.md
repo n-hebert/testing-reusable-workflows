@@ -1,4 +1,4 @@
 # Testing Reusable Workflows
-[![testing-reusable-workflows](https://github.com/n-hebert/testing-reusable-workflows/actions/workflows/basic.yml/badge.svg)](https://github.com/n-hebert/testing-reusable-workflows/actions/workflows/basic.yml)
+[![testing-reusable-workflows](https://github.com/n-hebert/testing-reusable-workflows/actions/workflows/basic.yml/badge.svg)](https://github.com/n-hebert/testing-reusable-workflows/actions/workflows/basic.yml) [![testing-reusable-workflows](https://github.com/n-hebert/testing-reusable-workflows/actions/workflows/complex.yml/badge.svg)](https://github.com/n-hebert/testing-reusable-workflows/actions/workflows/complex.yml)
 
-Let's see if it crashes
+Putting 'em to work!
