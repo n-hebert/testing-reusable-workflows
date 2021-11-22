@@ -15,5 +15,6 @@ jobs:
         include:
           ${{ fromJson(inputs.greeting_matrix) }}
     steps:
+      - run: env
       - run: echo "${{ matrix.greeting }} ${{ matrix.greet-name }}"
 
