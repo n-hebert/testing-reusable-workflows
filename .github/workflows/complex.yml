@@ -20,8 +20,9 @@ jobs:
           { "greeting" : "hola", "greet_name" : "charlie" }
         ]
 
-  greet-none:
-    name: Greet None
-    uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
-    with:
-      greeting_matrix: "[ ]"
+  # This will crash
+  #greet-none:
+  #  name: Greet None
+  #  uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
+  #  with:
+  #    greeting_matrix: "[ ]"
