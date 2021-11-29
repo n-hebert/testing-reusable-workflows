@@ -14,7 +14,7 @@ jobs:
       matrix:
         include:
           ${{ fromJson(inputs.greeting_matrix) }}
-    if: ${{ github.events.input.run_list == null }}
+    if: github.events.input.run_list != null
     steps:
       - run: echo "${{ matrix.greeting }} ${{ matrix.greet_name }}"
 
