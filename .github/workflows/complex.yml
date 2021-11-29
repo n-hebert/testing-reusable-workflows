@@ -6,6 +6,12 @@ on:
       -  main
 
   workflow_dispatch:
+    inputs:
+      run_list:
+        description: "Which people to greet"
+        type: string
+        required: false
+        default: ""
 
 jobs:
   greet-all:
