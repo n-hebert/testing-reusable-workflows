@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [ basic ]
-  pull_request:
-    branches: [ basic ]
 
   workflow_dispatch:
 
