@@ -14,8 +14,7 @@ jobs:
       matrix:
         include:
           ${{ fromJson(inputs.greeting_matrix) }}
-    if: ${{ github.events.inputs.run-list }} == "" || "contains(github.event.inputs.value, matrix.greet-name)"
+    if: ${{ github.events.inputs.run-list }} == "" || "contains(github.event.inputs.value, matrix.greet_name)"
     steps:
-      - run: env
-      - run: echo "${{ matrix.greeting }} ${{ matrix.greet-name }}"
+      - run: echo "${{ matrix.greeting }} ${{ matrix.greet_name }}"
 
