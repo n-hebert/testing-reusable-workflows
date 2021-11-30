@@ -10,10 +10,11 @@ on:
         description: "The greetings to run"
         required: false
         type: string
-    secrets:
-      conditional:
-        description: "A value triggers the execution of a job"
-        required: false
+    # secrets are not available to the `if` of a job, so this won't work
+    #secrets:
+    #  conditional:
+    #    description: "A value triggers the execution of a job"
+    #    required: false
 
 jobs:
   echo-inner-arg:
@@ -32,8 +33,8 @@ jobs:
     steps:
       - run: echo "${{ matrix.greeting }} ${{ matrix.greet_name }}"
 
-  run-if-secret-sent:
+  run-if-run_list-exists:
     runs-on: ubuntu-latest
-    if: secrets.conditional != null
+    if: run_list == null
     steps:
       - run: echo "Executing!"
