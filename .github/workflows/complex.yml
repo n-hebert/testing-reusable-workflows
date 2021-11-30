@@ -30,6 +30,17 @@ jobs:
         ]
       run_list: ${{ github.event.inputs.run_list }}
 
+  greet-one:
+    name: Greet One
+    uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main
+    with:
+      greeting_matrix: |
+        [
+          { "greeting" : "hallo", "greet_name" : "dan" },
+        ]
+    secrets:
+      conditional: true
+
   # This will crash
   #greet-none:
   #  name: Greet None

@@ -10,6 +10,11 @@ on:
         description: "The greetings to run"
         required: false
         type: string
+    secrets:
+      conditional:
+        description: "A value triggers the execution of a job"
+        required: false
+        type: boolean
 
 jobs:
   echo-inner-arg:
@@ -24,6 +29,12 @@ jobs:
         include:
           ${{ fromJson(inputs.greeting_matrix) }}
     # WARNING: This controls the whole matrix job, not the individual matrix members
-    if: contains(inputs.run_list, 'bob')
+    if: contains(inputs.run_list, 'bob') # This does not filter to just the "bob" job
     steps:
       - run: echo "${{ matrix.greeting }} ${{ matrix.greet_name }}"
+
+  run-if-secret-sent:
+    runs-on: ubuntu-latest
+    if: conditional != null
+    steps:
+      - run: echo "Executing!"
