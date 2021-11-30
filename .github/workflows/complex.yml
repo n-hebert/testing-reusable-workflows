@@ -9,7 +9,6 @@ on:
     inputs:
       run_list:
         description: "Which people to greet"
-        type: string
         required: false
         default: ""
 
@@ -17,7 +16,7 @@ jobs:
   echo-dispatch-arg:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ github.events.inputs.run_list }}"
+      - run: echo "${{ github.event.inputs.run_list }}"
 
   greet-all:
     name: Greet All
@@ -29,7 +28,7 @@ jobs:
           { "greeting" : "bonjour", "greet_name" : "bob" },
           { "greeting" : "hola", "greet_name" : "charlie" }
         ]
-      run_list: ${{ github.events.inputs.run_list }}
+      run_list: ${{ github.event.inputs.run_list }}
 
   # This will crash
   #greet-none:
