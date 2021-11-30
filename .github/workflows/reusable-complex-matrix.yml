@@ -23,6 +23,7 @@ jobs:
       matrix:
         include:
           ${{ fromJson(inputs.greeting_matrix) }}
+    # WARNING: This controls the whole matrix job, not the individual matrix members
     if: contains(inputs.run_list, 'bob')
     steps:
       - run: echo "${{ matrix.greeting }} ${{ matrix.greet_name }}"
