@@ -35,6 +35,6 @@ jobs:
 
   run-if-run_list-exists:
     runs-on: ubuntu-latest
-    if: run_list == null
+    if: inputs.run_list == null
     steps:
       - run: echo "Executing!"
