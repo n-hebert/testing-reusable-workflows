@@ -14,7 +14,6 @@ on:
 jobs:
   echo-arg:
     runs-on: ubuntu-latest
-    strategy:
     steps:
       - run: echo "${{ inputs.run_list }}"
 
