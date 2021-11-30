@@ -14,7 +14,6 @@ on:
       conditional:
         description: "A value triggers the execution of a job"
         required: false
-        type: boolean
 
 jobs:
   echo-inner-arg:
