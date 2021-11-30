@@ -14,6 +14,11 @@ on:
         default: ""
 
 jobs:
+  echo-dispatch-arg:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ github.events.inputs.run_list }}"
+
   greet-all:
     name: Greet All
     uses: n-hebert/testing-reusable-workflows/.github/workflows/reusable-complex-matrix.yml@main

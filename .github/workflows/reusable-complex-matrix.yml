@@ -12,7 +12,7 @@ on:
         type: string
 
 jobs:
-  echo-arg:
+  echo-inner-arg:
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ inputs.run_list }}"
