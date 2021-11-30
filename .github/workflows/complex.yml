@@ -24,6 +24,7 @@ jobs:
           { "greeting" : "bonjour", "greet_name" : "bob" },
           { "greeting" : "hola", "greet_name" : "charlie" }
         ]
+      run_list: ${{ inputs.run_list }}
 
   # This will crash
   #greet-none:
