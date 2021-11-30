@@ -34,6 +34,6 @@ jobs:
 
   run-if-secret-sent:
     runs-on: ubuntu-latest
-    if: conditional != null
+    if: secrets.conditional != null
     steps:
       - run: echo "Executing!"
