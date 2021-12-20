@@ -30,6 +30,7 @@ jobs:
           ${{ fromJson(inputs.greeting_matrix) }}
     # WARNING: This controls the whole matrix job, not the individual matrix members
     if: contains(inputs.run_list, 'bob') # This does not filter to just the "bob" job
+    name: Greet ${{matrix.greet_name}"
     steps:
       - run: echo "${{ matrix.greeting }} ${{ matrix.greet_name }}"
 
